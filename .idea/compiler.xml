@@ -7,11 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="sp04-orderservice" />
-        <module name="sp03-userservice" />
+        <module name="sp06-ribbon" />
         <module name="sp02-itemservice" />
         <module name="sp05-eureka" />
         <module name="sp01-commons" />
+        <module name="sp04-orderservice" />
+        <module name="sp03-userservice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,6 +21,7 @@
       <module name="sp03-userservice" target="1.8" />
       <module name="sp04-orderservice" target="1.8" />
       <module name="sp05-eureka" target="1.8" />
+      <module name="sp06-ribbon" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -28,6 +30,7 @@
       <module name="sp03-userservice" options="-parameters" />
       <module name="sp04-orderservice" options="-parameters" />
       <module name="sp05-eureka" options="-parameters" />
+      <module name="sp06-ribbon" options="-parameters" />
     </option>
   </component>
 </project>
