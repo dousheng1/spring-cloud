@@ -4,3 +4,8 @@ spring:
 #8001 , 8101 ,8201
 server:
   port: 8001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka
