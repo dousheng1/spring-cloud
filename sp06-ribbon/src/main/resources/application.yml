@@ -9,3 +9,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+
+ribbon:
+  # 不会提示,但是会爆黄
+  MaxAutoRetriesNextServer: 2   # 更换服务器的次数
+  MaxAutoRetries: 1   #单台服务器重试次数
