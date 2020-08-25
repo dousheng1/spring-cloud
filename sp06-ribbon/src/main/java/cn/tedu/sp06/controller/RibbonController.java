@@ -23,29 +23,29 @@ public class RibbonController {
 
     @GetMapping("/item-service/{orderId}")
     public JsonResult<List<Item>> getItems(@PathVariable Integer orderId) {
-        return restTemplate.getForObject("http://localhost:8001/{1}",JsonResult.class,orderId);
+        return restTemplate.getForObject("http://item-service/{1}",JsonResult.class,orderId);
     }
     @PostMapping("/item-service/decreaseNumber")
     public JsonResult<?> decreaseNumber(@RequestBody List<Item> items) {
-        return restTemplate.postForObject("http://localhost:8001/decreaseNumber", items, JsonResult.class);
+        return restTemplate.postForObject("http://item-service/decreaseNumber", items, JsonResult.class);
     }
 
     @GetMapping("/user-service/{userId}")
     public JsonResult<User> getUser(@PathVariable Integer userId) {
-        return restTemplate.getForObject("http://localhost:8101/{1}", JsonResult.class, userId);
+        return restTemplate.getForObject("http://user-service/{1}", JsonResult.class, userId);
     }
     @GetMapping("/user-service/{userId}/score")
     public JsonResult<?> addScore(@PathVariable Integer userId, Integer score) {
-        return restTemplate.getForObject("http://localhost:8101/{1}/score?score={2}",
+        return restTemplate.getForObject("http://user-service/{1}/score?score={2}",
                 JsonResult.class,userId, score);
     }
 
     @GetMapping("/order-service/{orderId}")
     public JsonResult<Order> getOrder(@PathVariable String orderId) {
-        return restTemplate.getForObject("http://localhost:8201/{1}", JsonResult.class,orderId);
+        return restTemplate.getForObject("http://order-service/{1}", JsonResult.class,orderId);
     }
     @GetMapping("/order-service")
     public JsonResult addOrder() {
-        return restTemplate.getForObject("http://localhost:8201/", JsonResult.class);
+        return restTemplate.getForObject("http://order-service:8201/", JsonResult.class);
     }
 }
