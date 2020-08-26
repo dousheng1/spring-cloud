@@ -14,3 +14,13 @@ ribbon:
   # 不会提示,但是会爆黄
   MaxAutoRetriesNextServer: 2   # 更换服务器的次数
   MaxAutoRetries: 1   #单台服务器重试次数
+
+# 设置hystrix 超时时间 默认1秒  超时之后执行降级方法
+# hystrix 熔断是 10秒内请求失败20次 启动熔断 直接返回降级方法
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
