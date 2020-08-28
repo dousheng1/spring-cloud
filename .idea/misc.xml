@@ -8,7 +8,8 @@
         <option value="$PROJECT_DIR$/sp03-userservice/pom.xml" />
         <option value="$PROJECT_DIR$/sp04-orderservice/pom.xml" />
         <option value="$PROJECT_DIR$/sp05-eureka/pom.xml" />
-        <option value="$PROJECT_DIR$/sp06-ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/sp08-hystrix-dashboard/pom.xml" />
+        <option value="$PROJECT_DIR$/sp09-feign/pom.xml" />
       </list>
     </option>
   </component>
