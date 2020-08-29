@@ -1,4 +1,4 @@
-package cn.tedu.sp09;
+package cn.tedu.sp09.controller;
 
 import cn.tedu.sp01.pojo.Item;
 import cn.tedu.sp01.pojo.Order;
@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * @program: spring-cloud
- * @description:
+ * @description: Ribbon 默认已经启用了负载均衡
  * @author: dqs
  * @create: 2020-08-28 18:00
  **/

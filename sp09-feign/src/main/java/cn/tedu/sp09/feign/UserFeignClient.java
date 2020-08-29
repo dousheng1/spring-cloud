@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
-@FeignClient(name = "user-service")
+@FeignClient(name = "user-service", fallback = UserFeignClientFB.class)
 public interface UserFeignClient {
     @GetMapping("/{userId}")
     JsonResult<User> getUser(@PathVariable Integer userId);
