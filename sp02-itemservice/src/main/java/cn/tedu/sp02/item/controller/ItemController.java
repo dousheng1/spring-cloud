@@ -39,7 +39,7 @@ public class ItemController {
         return JsonResult.ok().data(items).msg("port="+port);
     }
     //减少商品库存
-    @PostMapping("/decreasenumber")
+    @PostMapping("/decreaseNumber")
     public JsonResult<?> decreaseNumber(@RequestBody List<Item> items) {
         itemService.decreaseNumbers(items);
         return JsonResult.ok().msg("减少商品库存成功");
